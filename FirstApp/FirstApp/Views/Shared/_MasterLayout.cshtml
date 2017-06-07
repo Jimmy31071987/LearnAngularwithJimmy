@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div id="MainCanvas">
+        <header>
+            @*
+                Title, Logo, Page navigations.
+            *@
+        </header>
+        <main>
+            @* Content or user interactions canvas *@
+            @RenderBody()
+        </main>
+        <footer>
+            @* Company infos, products or Services links *@
+        </footer>
+    </div>
+
+    <div id="ScriptsCanvas">
+        <script src="~/Scripts/vendor/angular/main/angular.1.4.8.js"></script>
+        @RenderSection("LoadAngularAppsSection",false)
+    </div>
+</body>
+</html>
