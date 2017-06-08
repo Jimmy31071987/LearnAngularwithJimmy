@@ -1,7 +1,30 @@
-﻿/*
+﻿var inheritanceapp = angular.module("inHeritance", []);
+inheritanceapp.controller("ParentController", function ($scope) {
+    $scope.person = { greeted: false };
+});
+inheritanceapp.controller("ChildController", function ($scope) {
+    $scope.person.greeted = true;
+    $scope.person.name = "Parul Bansal";
+    $scope.Hey = function () {
+        $scope.person.name = "Hello World!";
+    }
+});
+
+var clickapp = angular.module("clickApp", ['inHeritance']);
+
+clickapp.controller("MyController", function ($scope) {
+
+    $scope.counter = 0;
+    $scope.add = function () { $scope.counter++; };
+    $scope.subtract = function () { $scope.counter--; };
+    $scope.addValue = function (value) { $scope.counter += value; }
+});
+
+
+/*
 Create a module
 */
-var authenticationapp = angular.module("authenticationApp", []);
+var authenticationapp = angular.module("authenticationApp", ['clickApp']);
 
 /*
  Call Constructor on Load 

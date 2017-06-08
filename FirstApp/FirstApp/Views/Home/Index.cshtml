@@ -11,6 +11,19 @@
         <h4>{{clock.now}}</h4>
     </div>
 
+    <div ng-controller="MyController">
+        <h4>Current Counter:{{counter}}</h4>
+        <button ng-click="add(1)" class="button">Add</button>
+        <a ng-click="subtract(1)" class="button alert">Subtract</a>
+    </div>
+
+    <div ng-controller="ParentController">
+        <div ng-controller="ChildController">
+            {{person}}
+            <button ng-click="Hey()">Say Hello</button>
+        </div>
+        {{person}}
+    </div>
 </div>
 
 @section LoadAngularAppsSection{
