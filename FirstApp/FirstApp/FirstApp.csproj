@@ -104,6 +104,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Scripts\app\authentication\app.js" />
+    <Content Include="Scripts\app\expressions\app.js" />
     <Content Include="Scripts\vendor\angular\main\angular.1.4.8.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -121,6 +122,7 @@
     <Content Include="packages.config" />
     <Content Include="Views\Shared\_MasterLayout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Expressions.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
